@@ -12,10 +12,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Farming Guides - AgroHub",
+  description:
+    "AgroHub is an Agriculure Information Hub where farmers can gather information about the agriculture.",
+  keywords: "agriculture, information, farmer",
+  robots: "index, follow",
+};
 
 export default function FarmingGuidesPage() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
       <section className="bg-green-700 text-white py-12 md:py-20">
         <div className="container">
@@ -83,7 +92,7 @@ export default function FarmingGuidesPage() {
               </p>
             </div>
             <Link
-              href="/farming-guides/featured"
+              href="#"
               className="text-green-600 hover:text-green-700 font-medium flex items-center mt-2 md:mt-0"
             >
               View all featured
@@ -95,7 +104,7 @@ export default function FarmingGuidesPage() {
             {featuredGuides.map((guide) => (
               <Link
                 key={guide.id}
-                href={`/farming-guides/${guide.slug}`}
+                href={`details`}
                 className="group flex flex-col h-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="aspect-video relative overflow-hidden">
@@ -176,7 +185,7 @@ export default function FarmingGuidesPage() {
                 </div>
                 <p className="text-gray-600 mb-4">{category.description}</p>
                 <Link
-                  href={`/farming-guides/category/${category.slug}`}
+                  href={`details`}
                   className="flex items-center text-green-600 font-medium hover:text-green-700"
                 >
                   View Guides
@@ -199,7 +208,7 @@ export default function FarmingGuidesPage() {
             {allGuides.map((guide) => (
               <Link
                 key={guide.id}
-                href={`/farming-guides/${guide.slug}`}
+                href={`details`}
                 className="group flex flex-col h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="p-5">
@@ -279,7 +288,7 @@ export default function FarmingGuidesPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

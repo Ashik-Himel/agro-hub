@@ -61,7 +61,7 @@ export default function CropDetailsSection() {
               </div>
 
               <Link
-                href={`/crop-details/${crop.slug}`}
+                href={`details`}
                 className="flex items-center text-green-600 font-medium hover:text-green-700"
               >
                 View Full Details

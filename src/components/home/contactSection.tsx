@@ -19,12 +19,23 @@ export default function ContactSection() {
     subject: "",
     message: "",
   });
+  const [fileAttachment, setFileAttachment] = useState<File | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setFileAttachment(e.target.files[0]);
+    }
+  };
+
+  const removeAttachment = () => {
+    setFileAttachment(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,7 +45,8 @@ export default function ContactSection() {
 
     try {
       // In a real application, you would send this data to your server
-      await submitContactForm(formData);
+      // including the file attachment
+      await submitContactForm(formData, fileAttachment);
 
       setIsSuccess(true);
 
@@ -45,6 +57,7 @@ export default function ContactSection() {
         subject: "",
         message: "",
       });
+      setFileAttachment(null);
 
       // Reset success state after 5 seconds
       setTimeout(() => {
@@ -59,21 +72,34 @@ export default function ContactSection() {
   };
 
   // This is a mock function that simulates sending the form data to a server
-  const submitContactForm = async (data: typeof formData) => {
+  const submitContactForm = async (
+    data: typeof formData,
+    file: File | null
+  ) => {
     // Simulate network request
     return new Promise((resolve) => {
       setTimeout(() => {
         console.log("Form submitted with data:", data);
+        if (file) {
+          console.log(
+            "File attached:",
+            file.name,
+            "Size:",
+            file.size,
+            "Type:",
+            file.type
+          );
+        }
         resolve({ success: true });
       }, 1500);
     });
   };
 
   return (
-    <section className="w-full py-12 md:py-16 bg-[#f8faf5]" id="contact">
-      <div className="container">
+    <section className="w-full py-12 md:py-24 bg-[#f8faf5]" id="contact">
+      <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-4 mb-8">
-          <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm font-semibold text-green-800">
+          <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-800">
             <MessageSquare className="mr-2 h-4 w-4 inline-block" />
             Get In Touch
           </div>
@@ -129,7 +155,7 @@ export default function ContactSection() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span>ashikujjamanhimel@gmail.com</span>
+                    <span>info@agriculturehub.com</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <svg
@@ -152,7 +178,9 @@ export default function ContactSection() {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <span>Kewa, Sreepur, Gazipur, Dhaka, Bangladesh.</span>
+                    <span>
+                      East of Kewa, Sreepur, Gazipur, Dhaka, Bangladesh
+                    </span>
                   </div>
                 </div>
               </div>
@@ -295,8 +323,56 @@ export default function ContactSection() {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      className="h-[120px] resize-none"
+                      className="h-[40px] resize-none"
                     />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="attachment">Attachment (optional)</Label>
+                    <div className="flex flex-col space-y-2">
+                      {fileAttachment ? (
+                        <div className="flex items-center justify-between p-2 border rounded-md bg-gray-50">
+                          <div className="flex items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-gray-500 mr-2"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                              />
+                            </svg>
+                            <span className="text-sm truncate max-w-[200px]">
+                              {fileAttachment.name}
+                            </span>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={removeAttachment}
+                            className="text-red-500 hover:text-red-700 text-sm"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ) : (
+                        <Input
+                          id="attachment"
+                          name="attachment"
+                          type="file"
+                          onChange={handleFileChange}
+                          className="cursor-pointer"
+                        />
+                      )}
+                      <p className="text-xs text-gray-500">
+                        Max file size: 5MB. Supported formats: PDF, DOC, DOCX,
+                        JPG, PNG
+                      </p>
+                    </div>
                   </div>
 
                   <Button

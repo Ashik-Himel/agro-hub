@@ -12,10 +12,19 @@ import {
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Crop Details - AgroHub",
+  description:
+    "AgroHub is an Agriculure Information Hub where farmers can gather information about the agriculture.",
+  keywords: "agriculture, information, farmer",
+  robots: "index, follow",
+};
 
 export default function CropDetailsPage() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
       <section className="bg-green-700 text-white py-12 md:py-20">
         <div className="container">
@@ -119,7 +128,7 @@ export default function CropDetailsPage() {
               </p>
             </div>
             <Link
-              href="/crop-details/featured"
+              href="#"
               className="text-green-600 hover:text-green-700 font-medium flex items-center mt-2 md:mt-0"
             >
               View all featured crops
@@ -192,13 +201,13 @@ export default function CropDetailsPage() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/crop-details/tomatoes"
+                    href="details"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-4 text-sm font-medium text-white shadow transition-colors hover:bg-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     View Full Details
                   </Link>
                   <Link
-                    href="/farming-guides/growing-tomatoes"
+                    href="details"
                     className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     Growing Guide
@@ -223,7 +232,7 @@ export default function CropDetailsPage() {
               </p>
             </div>
             <Link
-              href="/crop-details/seasonal"
+              href="#"
               className="text-green-600 hover:text-green-700 font-medium flex items-center mt-2 md:mt-0"
             >
               View seasonal calendar
@@ -235,7 +244,7 @@ export default function CropDetailsPage() {
             {seasonalCrops.map((crop) => (
               <Link
                 key={crop.id}
-                href={`/crop-details/${crop.slug}`}
+                href={`details`}
                 className="group flex flex-col h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="aspect-square relative overflow-hidden">
@@ -314,7 +323,7 @@ export default function CropDetailsPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 
@@ -354,7 +363,7 @@ function CropCard({ crop }: { crop: any }) {
       </div>
 
       <Link
-        href={`/crop-details/${crop.slug}`}
+        href={`details`}
         className="flex items-center text-green-600 font-medium hover:text-green-700"
       >
         View Full Details

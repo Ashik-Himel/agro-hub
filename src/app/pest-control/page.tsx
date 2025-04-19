@@ -12,10 +12,19 @@ import {
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pest Control - AgroHub",
+  description:
+    "AgroHub is an Agriculure Information Hub where farmers can gather information about the agriculture.",
+  keywords: "agriculture, information, farmer",
+  robots: "index, follow",
+};
 
 export default function PestControlPage() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
       <section className="bg-green-700 text-white py-12 md:py-20">
         <div className="container">
@@ -65,7 +74,7 @@ export default function PestControlPage() {
               </p>
             </div>
             <Link
-              href="/pest-control/identification"
+              href="details"
               className="text-green-600 hover:text-green-700 font-medium flex items-center mt-2 md:mt-0"
             >
               View full guide
@@ -77,7 +86,7 @@ export default function PestControlPage() {
             {commonPests.map((pest) => (
               <Link
                 key={pest.id}
-                href={`/pest-control/pests/${pest.slug}`}
+                href={`details`}
                 className="group flex flex-col h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="aspect-video relative overflow-hidden">
@@ -171,7 +180,7 @@ export default function PestControlPage() {
                   </div>
 
                   <Link
-                    href="/pest-control/organic-methods"
+                    href="#"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-4 text-sm font-medium text-white shadow transition-colors hover:bg-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     Explore Organic Methods
@@ -219,7 +228,7 @@ export default function PestControlPage() {
                   </div>
 
                   <Link
-                    href="/pest-control/integrated-management"
+                    href="#"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-4 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     Learn About IPM
@@ -264,7 +273,7 @@ export default function PestControlPage() {
                   </div>
 
                   <Link
-                    href="/pest-control/chemical-methods"
+                    href="#"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-amber-600 px-4 text-sm font-medium text-white shadow transition-colors hover:bg-amber-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     Chemical Control Guide
@@ -290,7 +299,7 @@ export default function PestControlPage() {
               </p>
             </div>
             <Link
-              href="/pest-control/diseases"
+              href="#"
               className="text-green-600 hover:text-green-700 font-medium flex items-center mt-2 md:mt-0"
             >
               View all diseases
@@ -333,7 +342,7 @@ export default function PestControlPage() {
                     </p>
                   </div>
                   <Link
-                    href={`/pest-control/diseases/${disease.slug}`}
+                    href={`details`}
                     className="text-green-600 hover:text-green-700 font-medium text-sm flex items-center"
                   >
                     Treatment Guide
@@ -398,7 +407,7 @@ export default function PestControlPage() {
 
           <div className="mt-8 text-center">
             <Link
-              href="/pest-control/seasonal-calendar"
+              href="#"
               className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             >
               View Detailed Calendar
@@ -428,7 +437,7 @@ export default function PestControlPage() {
                   Contact an Expert
                 </Link>
                 <Link
-                  href="/pest-control/consultation"
+                  href="#"
                   className="inline-flex h-10 items-center justify-center rounded-md border border-white px-6 text-sm font-medium text-white shadow-sm transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 >
                   Schedule Consultation
@@ -445,7 +454,7 @@ export default function PestControlPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

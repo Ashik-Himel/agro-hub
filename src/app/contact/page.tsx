@@ -1,9 +1,18 @@
 import ContactSection from "@/components/home/contactSection";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - AgroHub",
+  description:
+    "AgroHub is an Agriculure Information Hub where farmers can gather information about the agriculture.",
+  keywords: "agriculture, information, farmer",
+  robots: "index, follow",
+};
 
 export default function ContactPage() {
   return (
-    <>
+    <main>
       {/* Hero Section */}
       <section className="bg-green-700 text-white py-12 md:py-20">
         <div className="container">
@@ -150,7 +159,10 @@ export default function ContactPage() {
               Subscribe to our newsletter to receive the latest farming tips,
               seasonal guides, and agricultural news directly to your inbox.
             </p>
-            <form className="flex max-w-md mx-auto">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="flex max-w-md mx-auto"
+            >
               <input
                 type="email"
                 placeholder="Your email address"
@@ -167,7 +179,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

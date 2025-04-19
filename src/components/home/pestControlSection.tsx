@@ -36,7 +36,7 @@ export default function PestControlSection() {
                 descriptions and images.
               </p>
               <Link
-                href="/pest-control/identification"
+                href="details"
                 className="inline-flex items-center text-white font-medium hover:text-green-200"
               >
                 View Guide
@@ -61,7 +61,7 @@ export default function PestControlSection() {
                   {solution.description}
                 </p>
                 <Link
-                  href={`/pest-control/${solution.slug}`}
+                  href={`details`}
                   className="text-sm flex items-center text-green-600 font-medium hover:text-green-700"
                 >
                   Learn More
