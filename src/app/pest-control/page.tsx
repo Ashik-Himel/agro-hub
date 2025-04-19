@@ -74,7 +74,7 @@ export default function PestControlPage() {
               </p>
             </div>
             <Link
-              href="details"
+              href="#"
               className="text-green-600 hover:text-green-700 font-medium flex items-center mt-2 md:mt-0"
             >
               View full guide
@@ -86,7 +86,7 @@ export default function PestControlPage() {
             {commonPests.map((pest) => (
               <Link
                 key={pest.id}
-                href={`details`}
+                href={`#`}
                 className="group flex flex-col h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="aspect-video relative overflow-hidden">
@@ -342,7 +342,7 @@ export default function PestControlPage() {
                     </p>
                   </div>
                   <Link
-                    href={`details`}
+                    href={`#`}
                     className="text-green-600 hover:text-green-700 font-medium text-sm flex items-center"
                   >
                     Treatment Guide

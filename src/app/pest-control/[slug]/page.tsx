@@ -174,17 +174,17 @@ const strategy = {
     {
       title: "Organic Pest Control Quick Reference Guide",
       description: "Printable chart of common pests and organic solutions",
-      url: "details",
+      url: "#",
     },
     {
       title: "DIY Organic Spray Recipes",
       description: "Step-by-step instructions for homemade pest control sprays",
-      url: "details",
+      url: "#",
     },
     {
       title: "Beneficial Insects Identification Guide",
       description: "Visual guide to identifying helpful garden insects",
-      url: "details",
+      url: "#",
     },
   ],
 };

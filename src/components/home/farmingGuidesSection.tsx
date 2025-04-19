@@ -24,7 +24,7 @@ export default function FarmingGuidesSection() {
           {guides.map((guide) => (
             <Link
               key={guide.id}
-              href={`details`}
+              href={`#`}
               className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
             >
               <div className="aspect-video relative overflow-hidden">

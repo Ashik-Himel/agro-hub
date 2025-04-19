@@ -104,7 +104,7 @@ export default function FarmingGuidesPage() {
             {featuredGuides.map((guide) => (
               <Link
                 key={guide.id}
-                href={`details`}
+                href={`#`}
                 className="group flex flex-col h-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="aspect-video relative overflow-hidden">
@@ -185,7 +185,7 @@ export default function FarmingGuidesPage() {
                 </div>
                 <p className="text-gray-600 mb-4">{category.description}</p>
                 <Link
-                  href={`details`}
+                  href={`#`}
                   className="flex items-center text-green-600 font-medium hover:text-green-700"
                 >
                   View Guides
@@ -208,7 +208,7 @@ export default function FarmingGuidesPage() {
             {allGuides.map((guide) => (
               <Link
                 key={guide.id}
-                href={`details`}
+                href={`#`}
                 className="group flex flex-col h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="p-5">

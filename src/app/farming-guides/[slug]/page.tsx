@@ -125,17 +125,17 @@ const guide = {
     {
       title: "Organic Vegetable Planting Calendar",
       description: "Monthly planting guide for your region",
-      url: "details",
+      url: "#",
     },
     {
       title: "Companion Planting Chart",
       description: "Which plants grow well together",
-      url: "details",
+      url: "#",
     },
     {
       title: "Organic Pest Control Reference",
       description: "Natural solutions for common garden pests",
-      url: "details",
+      url: "#",
     },
   ],
 };
