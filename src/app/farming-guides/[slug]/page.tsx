@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import {
   ChevronRight,
@@ -21,14 +21,15 @@ const guide = {
   slug: "organic-vegetable-gardening",
   description:
     "Learn how to grow organic vegetables using sustainable practices, natural pest control, and proper soil management for a bountiful harvest.",
-  image: "/placeholder.svg?height=600&width=1200",
+  image:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKg-5j243gTdnDLGMf1cezhfvrS7M14OrKTA&s",
   category: "Vegetables",
   difficulty: "Beginner",
   readTime: 15,
   author: {
-    name: "Sarah Johnson",
+    name: "Ashikujjaman Himel",
     title: "Master Gardener",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "https://avatars.githubusercontent.com/u/85483328?v=4",
   },
   publishDate: "March 15, 2023",
   updatedDate: "January 10, 2024",
@@ -40,49 +41,56 @@ const guide = {
         title: "Getting Started: Planning Your Organic Garden",
         content:
           "Before you start planting, it's important to plan your garden carefully. Consider the space you have available, the amount of sunlight it receives, and the types of vegetables you want to grow. Choose a location that gets at least 6-8 hours of direct sunlight daily and has good drainage. If you're limited on space, container gardening is an excellent alternative.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/649e7c074d05799152f17a69_Organic%20Gardening.webp",
         imageAlt: "Garden planning diagram showing layout of vegetable beds",
       },
       {
         title: "Building Healthy Soil",
         content:
           "The foundation of successful organic gardening is healthy soil. Start by testing your soil to determine its pH and nutrient levels. Most vegetables prefer a slightly acidic to neutral pH (6.0-7.0). Improve your soil by adding compost, aged manure, or other organic matter. This enhances soil structure, drainage, and nutrient content. Consider using cover crops during the off-season to prevent erosion and add nutrients back to the soil.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4XTB7qm9VAY7jP_-UXY3um4m-WWCphk53yg&s",
         imageAlt: "Person adding compost to garden soil",
       },
       {
         title: "Choosing Organic Seeds and Plants",
         content:
           "Select organic, non-GMO seeds or seedlings whenever possible. Look for varieties that are well-suited to your climate and resistant to common diseases in your area. Heirloom varieties often have excellent flavor and can be good choices for organic gardens. Start seeds indoors 6-8 weeks before your last frost date, or purchase organic seedlings from a reputable nursery.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQkORaUsMDq8kkhR3mO3W0XuBs5fLW1AxCg&s",
         imageAlt: "Various organic vegetable seeds in packets",
       },
       {
         title: "Natural Pest Management",
         content:
           "Instead of synthetic pesticides, use natural methods to control pests. Encourage beneficial insects like ladybugs, lacewings, and predatory wasps by planting flowers such as marigolds, cosmos, and zinnias. Practice companion planting—for example, plant basil near tomatoes to repel tomato hornworms. For persistent pest problems, try organic solutions like neem oil, insecticidal soap, or diatomaceous earth.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyI-LmEG_gJUI_7hdai-bBEqYCuDWrjvetEQ&s",
         imageAlt: "Ladybug on a plant leaf eating aphids",
       },
       {
         title: "Organic Fertilizing Methods",
         content:
           "Feed your plants with organic fertilizers derived from natural sources. Compost tea, fish emulsion, seaweed extract, and worm castings are excellent options. Apply these fertilizers according to package directions, being careful not to over-fertilize, which can lead to excessive foliage growth at the expense of fruit production.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://tractorguru.in/blog/wp-content/uploads/2022/02/Types-of-Organic-Fertilizer-.jpg",
         imageAlt: "Person applying compost tea to vegetable plants",
       },
       {
         title: "Water Conservation Techniques",
         content:
           "Use water efficiently in your organic garden. Install a drip irrigation system or soaker hoses to deliver water directly to plant roots, reducing waste and preventing fungal diseases that can occur with overhead watering. Mulch around plants with organic materials like straw, leaves, or grass clippings to retain moisture and suppress weeds. Water deeply but infrequently to encourage deep root growth.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1PhaxacmedrF1HtzEh_Y-MYlp58AdSrLAXg&s",
         imageAlt: "Drip irrigation system in a vegetable garden",
       },
       {
         title: "Harvesting and Seed Saving",
         content:
           "Harvest vegetables at their peak ripeness for the best flavor and nutrition. Most vegetables should be harvested in the morning when temperatures are cooler. To save seeds for next year's garden, select the healthiest, most productive plants. Allow some fruits to fully mature on the plant, then collect and properly dry the seeds before storing them in a cool, dry place.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjSwn0X30evDvXGASvKroddBsPM3DAryCJw&s",
         imageAlt: "Person harvesting fresh vegetables from garden",
       },
     ],
@@ -94,21 +102,24 @@ const guide = {
       id: 1,
       title: "Companion Planting Strategies",
       slug: "companion-planting",
-      image: "/placeholder.svg?height=200&width=300",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPk7r6HZrxhw_nRm3_OqzEZ-neQ1CZt-RzXQ&s",
       category: "Vegetables",
     },
     {
       id: 2,
       title: "Composting Fundamentals",
       slug: "composting-fundamentals",
-      image: "/placeholder.svg?height=200&width=300",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVlb6qM_TeKWQHdSra97zC5rQytW-7ZiuzVA&s",
       category: "Soil Management",
     },
     {
       id: 3,
       title: "Natural Pest Control Methods",
       slug: "natural-pest-control",
-      image: "/placeholder.svg?height=200&width=300",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvPulhzgbxKc70Rh-OVfNuZwpn0hp4ECJ6Q&s",
       category: "Pest Control",
     },
   ],
@@ -212,11 +223,10 @@ export default function FarmingGuideDetailPage() {
               <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-5">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                    <Image
-                      src={guide.author.image || "/placeholder.svg"}
+                    <img
+                      src={guide.author.image}
                       alt={guide.author.name}
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
@@ -265,11 +275,10 @@ export default function FarmingGuideDetailPage() {
       <section className="pb-8 md:pb-12">
         <div className="container px-4 md:px-6">
           <div className="relative aspect-video rounded-xl overflow-hidden">
-            <Image
-              src={guide.image || "/placeholder.svg"}
+            <img
+              src={guide.image}
               alt={guide.title}
-              fill
-              className="object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -298,11 +307,10 @@ export default function FarmingGuideDetailPage() {
                       {section.content}
                     </p>
                     <div className="relative aspect-video rounded-lg overflow-hidden mt-4">
-                      <Image
-                        src={section.image || "/placeholder.svg"}
+                      <img
+                        src={section.image}
                         alt={section.imageAlt}
-                        fill
-                        className="object-cover"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -405,11 +413,10 @@ export default function FarmingGuideDetailPage() {
                       className="flex gap-3 group"
                     >
                       <div className="relative h-16 w-24 rounded overflow-hidden flex-shrink-0">
-                        <Image
-                          src={relatedGuide.image || "/placeholder.svg"}
+                        <img
+                          src={relatedGuide.image}
                           alt={relatedGuide.title}
-                          fill
-                          className="object-cover"
+                          className="w-full h-full object-cover"
                         />
                       </div>
                       <div>

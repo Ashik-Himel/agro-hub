@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import {
   ChevronRight,
@@ -24,7 +24,8 @@ const crop = {
   slug: "tomatoes",
   description:
     "Tomatoes are the edible berry of the plant Solanum lycopersicum, commonly known as a tomato plant. They are a significant source of umami flavor and are widely used in many cuisines around the world. Tomatoes come in various sizes, shapes, and colors, including red, yellow, orange, green, and purple.",
-  image: "/placeholder.svg?height=600&width=1200",
+  image:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY3dnifdWPJp_EthTgj_mnSnt9wuVakCiXWw&s",
   category: "Vegetables",
   origin: "Western South America and Central America",
   nutritionalValue:
@@ -47,7 +48,8 @@ const crop = {
     {
       name: "Roma",
       description: "Plum tomatoes with few seeds, ideal for sauces and canning",
-      image: "/placeholder.svg?height=200&width=200",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2whITDUQFPmMuVyEhPpGVQUaUK62RrsY-w&s",
       daysToMaturity: "75-80",
       size: "3-4 ounces",
       type: "Determinate",
@@ -55,7 +57,7 @@ const crop = {
     {
       name: "Beefsteak",
       description: "Large, meaty tomatoes perfect for sandwiches and slicing",
-      image: "/placeholder.svg?height=200&width=200",
+      image: "https://cdn.mos.cms.futurecdn.net/iErY5TBF89D5nciWknLnsV.jpg",
       daysToMaturity: "85-90",
       size: "10-16 ounces",
       type: "Indeterminate",
@@ -63,7 +65,8 @@ const crop = {
     {
       name: "Cherry",
       description: "Small, sweet tomatoes great for snacking and salads",
-      image: "/placeholder.svg?height=200&width=200",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMm4YT8LcJHIQEsSGP6cVNUpTXxhyGwTYqEg&s",
       daysToMaturity: "65-70",
       size: "1-2 ounces",
       type: "Indeterminate",
@@ -71,7 +74,8 @@ const crop = {
     {
       name: "Heirloom",
       description: "Open-pollinated varieties with unique flavors and colors",
-      image: "/placeholder.svg?height=200&width=200",
+      image:
+        "https://static1.backyardbossimages.com/wordpress/wp-content/uploads/2023/05/Shutterstock_475817554.jpg",
       daysToMaturity: "70-90",
       size: "Varies",
       type: "Mostly Indeterminate",
@@ -128,34 +132,39 @@ const crop = {
     {
       name: "Peppers",
       slug: "peppers",
-      image: "/placeholder.svg?height=100&width=100",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTpQ72Ogejcmt2KdAU2SWwQ_p-pjb3oDaytw&s",
     },
     {
       name: "Eggplant",
       slug: "eggplant",
-      image: "/placeholder.svg?height=100&width=100",
+      image:
+        "https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/eggplant.jpg.webp?itok=k6_74IzB",
     },
     {
       name: "Potatoes",
       slug: "potatoes",
-      image: "/placeholder.svg?height=100&width=100",
+      image:
+        "https://cdn.mos.cms.futurecdn.net/iC7HBvohbJqExqvbKcV3pP-1200-80.jpg",
     },
   ],
   relatedGuides: [
     {
       title: "Growing Tomatoes in Containers",
       slug: "container-tomatoes",
-      image: "/placeholder.svg?height=100&width=150",
+      image: "https://i.ytimg.com/vi/B_VVlA7VsCE/maxresdefault.jpg",
     },
     {
       title: "Pruning Tomato Plants for Maximum Yield",
       slug: "pruning-tomatoes",
-      image: "/placeholder.svg?height=100&width=150",
+      image:
+        "https://www.gardeningchores.com/wp-content/uploads/2021/06/Pruning-Tomato-Plants-For-Maximum-Yield-And-Plant-Health.jpg",
     },
     {
       title: "Organic Pest Control for Tomatoes",
       slug: "tomato-pest-control",
-      image: "/placeholder.svg?height=100&width=150",
+      image:
+        "https://www.asiafarming.com/wp-content/uploads/2024/05/Organic-Pest-Control-for-Tomato-Farming4-1024x684.jpg",
     },
   ],
 };
@@ -208,11 +217,10 @@ export default function CropDetailPage() {
               </div>
             </div>
             <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src={crop.image || "/placeholder.svg"}
+              <img
+                src={crop.image}
                 alt={crop.name}
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -466,11 +474,10 @@ export default function CropDetailPage() {
                           className="flex gap-3 group"
                         >
                           <div className="relative h-16 w-24 rounded overflow-hidden flex-shrink-0">
-                            <Image
-                              src={guide.image || "/placeholder.svg"}
+                            <img
+                              src={guide.image}
                               alt={guide.title}
-                              fill
-                              className="object-cover"
+                              className="w-full h-full object-cover"
                             />
                           </div>
                           <div>
@@ -514,11 +521,10 @@ export default function CropDetailPage() {
                     className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden"
                   >
                     <div className="relative aspect-square">
-                      <Image
-                        src={variety.image || "/placeholder.svg"}
+                      <img
+                        src={variety.image}
                         alt={variety.name}
-                        fill
-                        className="object-cover"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="p-4">
@@ -763,11 +769,10 @@ export default function CropDetailPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
                   <div className="relative h-48">
-                    <Image
-                      src="/placeholder.svg?height=300&width=400"
+                    <img
+                      src="https://www.healthyseasonalrecipes.com/wp-content/uploads/2023/07/simple-tomato-salad-sq-015-640x360.jpg"
                       alt="Fresh tomato salad"
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-5">
@@ -786,11 +791,10 @@ export default function CropDetailPage() {
 
                 <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
                   <div className="relative h-48">
-                    <Image
-                      src="/placeholder.svg?height=300&width=400"
+                    <img
+                      src="https://www.chowhound.com/img/gallery/basic-all-purpose-tomato-sauce-recipe/l-intro-1703185537.jpg"
                       alt="Tomato sauce"
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-5">
@@ -809,11 +813,10 @@ export default function CropDetailPage() {
 
                 <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
                   <div className="relative h-48">
-                    <Image
-                      src="/placeholder.svg?height=300&width=400"
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4HmNR_JVnPx0RAAL3mRwT6hv5VvEBdA-Bqw&s"
                       alt="Preserved tomatoes"
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-5">
@@ -889,11 +892,10 @@ export default function CropDetailPage() {
               >
                 <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
                   <div className="relative aspect-square">
-                    <Image
-                      src={relatedCrop.image || "/placeholder.svg"}
+                    <img
+                      src={relatedCrop.image}
                       alt={relatedCrop.name}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
                     />
                   </div>
                   <div className="p-3 text-center">
@@ -925,7 +927,7 @@ export default function CropDetailPage() {
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-green-600"
+                className="border-white text-black hover:bg-green-600"
               >
                 Explore Varieties
               </Button>

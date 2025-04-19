@@ -201,13 +201,13 @@ export default function CropDetailsPage() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="#"
+                    href="/crop-details/tomatoes"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-4 text-sm font-medium text-white shadow transition-colors hover:bg-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     View Full Details
                   </Link>
                   <Link
-                    href="#"
+                    href="/farming-guides/tomatoes"
                     className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                   >
                     Growing Guide
@@ -244,7 +244,7 @@ export default function CropDetailsPage() {
             {seasonalCrops.map((crop) => (
               <Link
                 key={crop.id}
-                href={`#`}
+                href={`/crop-details/${crop.slug}`}
                 className="group flex flex-col h-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
               >
                 <div className="aspect-square relative overflow-hidden">
@@ -363,7 +363,7 @@ function CropCard({ crop }: { crop: any }) {
       </div>
 
       <Link
-        href={`#`}
+        href={`/crop-details/${crop.slug}`}
         className="flex items-center text-green-600 font-medium hover:text-green-700"
       >
         View Full Details

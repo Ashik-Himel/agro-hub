@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import {
   ChevronRight,
@@ -22,7 +22,8 @@ const strategy = {
   slug: "organic-pest-control",
   description:
     "Learn how to manage pests in your garden or farm using natural, chemical-free methods that protect beneficial insects and the environment.",
-  image: "/placeholder.svg?height=600&width=1200",
+  image:
+    "https://cdn.shopify.com/s/files/1/0673/1697/3862/files/stale.jpg?v=1690956842",
   category: "Pest Control",
   approach: "Organic",
   updatedDate: "February 15, 2024",
@@ -34,14 +35,16 @@ const strategy = {
         title: "Prevention: The First Line of Defense",
         content:
           "The most effective organic pest control strategy is prevention. Start with healthy soil, which produces strong plants that can better resist pests and diseases. Choose pest-resistant varieties suited to your climate and growing conditions. Practice crop rotation to disrupt pest life cycles, and maintain proper spacing for good air circulation. Keep your garden clean by removing diseased plants and debris that can harbor pests.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0KTLsrmvzt3qDTQpTTfhFhmcjv1iqUfdFdQ&s",
         imageAlt: "Healthy garden with diverse plantings for pest prevention",
       },
       {
         title: "Physical Barriers and Traps",
         content:
           "Physical barriers prevent pests from reaching your plants. Row covers, netting, and plant collars can protect against flying insects, birds, and soil-dwelling pests. Sticky traps catch flying insects like aphids and whiteflies. Yellow tr  and soil-dwelling pests. Sticky traps catch flying insects like aphids and whiteflies. Yellow traps attract aphids and whiteflies, while blue traps work well for thrips. Pheromone traps can monitor and reduce specific insect populations by attracting males with synthetic versions of female scents. Handpicking larger pests like caterpillars and beetles is labor-intensive but effective for small gardens.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://www.picturethisai.com/image-handle/website_cmsname/image/1080/432716804033282048.jpeg?x-oss-process=image/format,webp/quality,q_80&v=1.0",
         imageAlt:
           "Various physical pest barriers including row covers and sticky traps",
       },
@@ -49,35 +52,39 @@ const strategy = {
         title: "Beneficial Insects and Biological Controls",
         content:
           "Nature provides its own pest control through beneficial insects that prey on garden pests. Ladybugs, lacewings, and praying mantises feed on aphids and other soft-bodied insects. Parasitic wasps lay eggs inside caterpillars and other hosts. Ground beetles consume slugs, snails, and soil-dwelling pests. Attract these beneficial insects by planting diverse flowering plants that provide nectar and pollen. You can also purchase beneficial insects for release in your garden when pest populations are high.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROeJQNHC6jj2KeS73CNjudDXGN-mToiHYiRg&s",
         imageAlt: "Ladybug feeding on aphids on a plant leaf",
       },
       {
         title: "Companion Planting",
         content:
           "Companion planting involves growing certain plants together to repel pests or attract beneficial insects. Aromatic herbs like basil, mint, and rosemary repel many common garden pests. Marigolds deter nematodes and other soil pests. Nasturtiums act as trap crops for aphids, drawing them away from your vegetables. Flowering plants like cosmos, zinnias, and sunflowers attract pollinators and beneficial insects that prey on pests.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg5dL2WB19gy-s0QvYn_HF_TZ7aRoq1qBTFA&s",
         imageAlt: "Companion planting with vegetables and flowers intermixed",
       },
       {
         title: "Organic Sprays and Treatments",
         content:
           "When prevention isn't enough, organic sprays can help control pest outbreaks. Neem oil, derived from the neem tree, disrupts insect feeding and reproduction. Insecticidal soaps kill soft-bodied insects by disrupting their cell membranes. Diatomaceous earth, a powder made from fossilized algae, has sharp microscopic edges that cut through insect exoskeletons. Bacillus thuringiensis (Bt) is a naturally occurring bacteria that targets specific caterpillars. Homemade sprays using garlic, hot peppers, or soap can also be effective for minor infestations.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://squarefootgardening.org/wp-content/uploads/2020/05/shutterstock_199679120-scaled-jpg.webp",
         imageAlt: "Person applying organic neem oil spray to plants",
       },
       {
         title: "Cultural Practices",
         content:
           "Cultural practices are the ongoing activities that help prevent and manage pests. Proper watering techniques, like watering at the base of plants in the morning, reduce fungal diseases. Mulching conserves moisture, suppresses weeds, and creates habitat for beneficial insects like ground beetles. Regular monitoring allows you to catch pest problems early when they're easier to manage. Healthy soil with proper nutrients helps plants resist pests and diseases naturally.",
-        image: "/placeholder.svg?height=400&width=600",
+        image:
+          "https://plantcelltechnology.com/cdn/shop/articles/shutterstock-1964177716.jpg?v=1708231067&width=1100",
         imageAlt: "Gardener inspecting plants for early signs of pest damage",
       },
       {
         title: "Integrated Approach",
         content:
           "The most effective organic pest control combines multiple strategies. Start with prevention, monitor regularly for early detection, use physical barriers and traps, encourage beneficial insects, practice companion planting, and use organic treatments only when necessary. This integrated approach creates a balanced ecosystem where pests are kept in check naturally, reducing the need for intervention over time.",
-        image: "/placeholder.svg?height=400&width=600",
+        image: "https://www.agrivi.com/wp-content/uploads/2016/05/sl1-1.jpg",
         imageAlt:
           "Diverse garden ecosystem with multiple pest control strategies in use",
       },
@@ -157,17 +164,20 @@ const strategy = {
     {
       title: "Integrated Pest Management (IPM)",
       slug: "integrated-pest-management",
-      image: "/placeholder.svg?height=100&width=150",
+      image:
+        "https://www.nifa.usda.gov/sites/default/files/styles/hero_image_small_1024w/public/2023-09/pests-pesticide.jpg?itok=D7c4ldn4",
     },
     {
       title: "Companion Planting for Pest Control",
       slug: "companion-planting",
-      image: "/placeholder.svg?height=100&width=150",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4VXriWRxh9soGI-N-8bLDxT0lh6eJpXs4Sg&s",
     },
     {
       title: "Beneficial Insects Guide",
       slug: "beneficial-insects",
-      image: "/placeholder.svg?height=100&width=150",
+      image:
+        "https://i.ytimg.com/vi/ai8XRf_wYjA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAfV2Awa4QnbRH-MqwYdjZPTA0v7A",
     },
   ],
   downloadableResources: [
@@ -202,13 +212,6 @@ export default function PestControlStrategyPage() {
             <ChevronRight className="h-4 w-4 mx-1" />
             <Link href="/pest-control" className="hover:text-green-600">
               Pest Control
-            </Link>
-            <ChevronRight className="h-4 w-4 mx-1" />
-            <Link
-              href="/pest-control/strategies"
-              className="hover:text-green-600"
-            >
-              Strategies
             </Link>
             <ChevronRight className="h-4 w-4 mx-1" />
             <span className="text-gray-900 font-medium">{strategy.title}</span>
@@ -295,11 +298,10 @@ export default function PestControlStrategyPage() {
       <section className="pb-8 md:pb-12">
         <div className="container px-4 md:px-6">
           <div className="relative aspect-video rounded-xl overflow-hidden">
-            <Image
-              src={strategy.image || "/placeholder.svg"}
+            <img
+              src={strategy.image}
               alt={strategy.title}
-              fill
-              className="object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
@@ -328,11 +330,10 @@ export default function PestControlStrategyPage() {
                       {section.content}
                     </p>
                     <div className="relative aspect-video rounded-lg overflow-hidden mt-4">
-                      <Image
-                        src={section.image || "/placeholder.svg"}
+                      <img
+                        src={section.image}
                         alt={section.imageAlt}
-                        fill
-                        className="object-cover"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
@@ -409,17 +410,12 @@ export default function PestControlStrategyPage() {
                 </h3>
                 <div className="space-y-4">
                   {strategy.relatedStrategies.map((relatedStrategy, index) => (
-                    <Link
-                      key={index}
-                      href={`/pest-control/strategies/${relatedStrategy.slug}`}
-                      className="flex gap-3 group"
-                    >
+                    <Link key={index} href={`#`} className="flex gap-3 group">
                       <div className="relative h-16 w-24 rounded overflow-hidden flex-shrink-0">
-                        <Image
-                          src={relatedStrategy.image || "/placeholder.svg"}
+                        <img
+                          src={relatedStrategy.image}
                           alt={relatedStrategy.title}
-                          fill
-                          className="object-cover"
+                          className="w-full h-full object-cover"
                         />
                       </div>
                       <div>
@@ -433,7 +429,7 @@ export default function PestControlStrategyPage() {
 
                 <div className="mt-4 pt-4 border-t">
                   <Link
-                    href="/pest-control/strategies"
+                    href="#"
                     className="text-green-600 hover:text-green-700 font-medium flex items-center"
                   >
                     View All Strategies
