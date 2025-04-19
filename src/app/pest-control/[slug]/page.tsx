@@ -617,10 +617,7 @@ export default function PestControlStrategyPage() {
               control tips, seasonal alerts, and agricultural news directly to
               your inbox.
             </p>
-            <form
-              className="flex max-w-md mx-auto"
-              onSubmit={(e) => e.preventDefault()}
-            >
+            <form className="flex max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Your email address"

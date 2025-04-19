@@ -159,10 +159,7 @@ export default function ContactPage() {
               Subscribe to our newsletter to receive the latest farming tips,
               seasonal guides, and agricultural news directly to your inbox.
             </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex max-w-md mx-auto"
-            >
+            <form className="flex max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Your email address"

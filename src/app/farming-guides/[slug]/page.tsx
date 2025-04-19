@@ -450,10 +450,7 @@ export default function FarmingGuideDetailPage() {
               Subscribe to our newsletter to receive the latest farming guides,
               seasonal tips, and agricultural news directly to your inbox.
             </p>
-            <form
-              className="flex max-w-md mx-auto"
-              onSubmit={(e) => e.preventDefault()}
-            >
+            <form className="flex max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Your email address"
