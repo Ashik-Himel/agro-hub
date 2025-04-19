@@ -6,6 +6,7 @@ import {
   MessageSquare,
   CloudSun,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function FeaturesSection() {
   return (
@@ -107,12 +108,12 @@ export default function FeaturesSection() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <a
+          <Link
             href="/farming-guides"
             className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             Explore Our Guides
-          </a>
+          </Link>
         </div>
       </div>
     </section>
